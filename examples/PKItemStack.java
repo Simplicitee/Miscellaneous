@@ -16,7 +16,7 @@ import net.md_5.bungee.api.ChatColor;
 
 public class PKItemStack {
 	
-	private static Map<ItemStack, PKItemStack> instances = new HashMap<>();//Not Concurrent because of compatibility issues between Java 7 & 8
+	private static Map<ItemStack, PKItemStack> instances = new HashMap<>(); //Not Concurrent because of compatibility issues between Java 7 & 8
 
 	protected ItemStack stack;
 	protected short pki_durability = 1;
