@@ -30,11 +30,12 @@ public class PKItemStack {
 		instances.put(stack, this);
 	}
 	
-	/**Returns the PKItem associated with this itemstack*/
+	/**Returns the PKItem associated with this PKItemStack*/
 	public PKItem getItem() {
 		return PKItem.INSTANCE_MAP.get(PKI_ID);
 	}
 	
+	/**Returns the ItemStack associated with this PKItemStack*/
 	public ItemStack getItemStack() {
 		return stack;
 	}
