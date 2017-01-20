@@ -24,12 +24,18 @@ public class Attribute {
   public TYPE modify(BendingPlayer bPlayer) {
     TYPE modified = value;
     for (AttributeModifier modifier : modifiers) {
-      if (!modifier.canModifiy(bPlayer)) {
+      if (!modifier.canModify(bPlayer)) {
         continue;
       }
       value = modifier.newValue(value);
     }
     
     return modified;
+  }
+  
+  public class AttributeModifier {
+    
+    public boolean canModify() {
+    }
   }
 }
