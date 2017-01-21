@@ -33,9 +33,8 @@ public class Attribute {
     return modified;
   }
   
-  public class AttributeModifier {
-    
-    public boolean canModify() {
-    }
+  public interface AttributeModifier {
+    public boolean canModify(BendingPlayer bPlayer);
+    public TYPE modify(TYPE value);
   }
 }
