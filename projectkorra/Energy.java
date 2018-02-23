@@ -2,6 +2,8 @@
 public class Energy {
   
   public double value;
+  public double rechargeAmount;
+  public long rechargeInterval, lastRecharge;
   
   public Energy(double value) {
     this.value = value;
@@ -16,6 +18,13 @@ public class Energy {
     if (value - use <= 0) return false;
     value -= use;
     return true;
+  }
+  
+  public void rechargeEnergy() {
+    if (System.currentTimeMillis() >= lastRecharge + rechargeInterval) {
+      lastRecharge = System.currentTimeMillis();
+      value += rechargeAmount;
+    }
   }
 }
   
